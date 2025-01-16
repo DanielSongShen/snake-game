@@ -63,9 +63,9 @@ class Button:
         return self.rect.collidepoint(pos)
 
 class PowerUp:
-    def __init__(self, position, type):
+    def __init__(self, position, race):
         self.position = position
-        self.type = type
+        self.type = race
         self.timer = 200  # Power-up disappears after 200 frames
 
     def draw(self, screen):
@@ -75,7 +75,7 @@ class PowerUp:
 class SnakeGame:
     def __init__(self):
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
-        pygame.display.set_caption("Snake Xenzia")
+        pygame.display.set_caption("Snake Game")
         self.clock = pygame.time.Clock()
         self.font = pygame.font.Font(None, 36)
         self.load_settings()
