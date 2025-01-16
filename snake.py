@@ -8,6 +8,8 @@ from enum import Enum, auto
 pygame.init()
 
 # Constants
+INFO_BAR_HEIGHT = 60
+POWER_UP_DURATION = 300
 WIDTH, HEIGHT = 640, 480
 GRID_SIZE = 20
 GRID_WIDTH = WIDTH // GRID_SIZE
@@ -15,7 +17,6 @@ GRID_HEIGHT = (HEIGHT - 60) // GRID_SIZE  # Reduce play area height to make room
 DEFAULT_SPEED = 10
 MIN_SPEED = 5
 MAX_SPEED = 20
-POWER_UP_DURATION = 300
 
 # Colors
 class Colors:
@@ -74,6 +75,23 @@ class PowerUp:
 
 class SnakeGame:
     def __init__(self):
+        self.walls_button = None
+        self.quit_button = None
+        self.settings_button = None
+        self.start_button = None
+        self.walls_on = None
+        self.speed_up_button = None
+        self.speed_down_button = None
+        self.back_button = None
+        self.restart_button = None
+        self.menu_button = None
+        self.snake = None
+        self.direction = None
+        self.food = None
+        self.score = None
+        self.level = None
+        self.speed = None
+        self.high_score = None
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("Snake Game")
         self.clock = pygame.time.Clock()
