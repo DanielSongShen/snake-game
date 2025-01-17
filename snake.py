@@ -227,7 +227,7 @@ class SnakeGame:
         self.screen.fill(Colors.BLACK)
 
         # Draw info bar
-        pygame.draw.rect(self.screen, Colors.GRAY, (0, 0, WIDTH, 60))
+        pygame.draw.rect(self.screen, Colors.BLACK, (0, 0, WIDTH, 60))
         self.draw_hud()
 
         # Draw snake
